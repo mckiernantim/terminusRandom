@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "terminus"
+    }
+  },
+  "defaultProject": "terminus",
+  "cli": {
+    "analytics": false
+  }
 }

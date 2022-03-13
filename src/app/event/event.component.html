@@ -1,0 +1,40 @@
+<button (click)="getRandomEvent()">
+    get an event
+</button>
+<button (click)="getCargo(cargo.value)">get some cargo</button>
+<input #cargo placeholder="how many items"> 
+<ul>
+    <li *ngFor='let item of cargoRolls'> {{item.index}}: {{item.text}}</li>
+</ul>
+
+<h3>
+    {{event.number}}
+    <br>
+    {{event.text}}
+</h3>
+<h3>
+    bust score calculator
+    <input #burst>
+    <!-- <select #burst placeholder="enter str">
+        <option>select strength bonus</option>
+        <option value=0>+0 - wuss</option>
+        <option value=2>+2</option>
+        <option value=3>+3</option>
+        <option value=4>+4</option>
+        <option value=5>+5</option>
+    </select> -->
+    <select #caliber placeholder="enter caliber">
+        <option>select a caliber</option>
+    <option value=4>d4 - manageable</option>
+    <option value=6>d6 - little tougher</option>
+    <option value=8>d8 - you maniac</option>
+    <option value=10>d10 - you better be a warmech </option>
+    </select>
+    <input #ammo placeholder="enter ammo">
+    <button (click)="calculateBurst(burst.value, caliber.value, ammo.value)">get burst scpre</button>
+<h4>{{burstRoll}}0</h4>
+<h5>You land {{burstRoll}}0% of shots </h5>
+<h5>your burst is {{damage}}d{{caliber.value}}</h5>
+<h5>you can spray dealing 1d{{caliber.value}} for every {{spray}} rounds fired </h5>
+
+</h3>
